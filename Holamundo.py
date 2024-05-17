@@ -1,0 +1,4 @@
+#PRINT HOLA MUNDO CON VARIABLE
+
+VariblePrueba = "HOLA MUNDO"
+print(VariblePrueba)
