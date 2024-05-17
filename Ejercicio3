@@ -1,0 +1,10 @@
+
+
+Peso = float(input("Ingrese su peso en KG: "))
+Estatura = float(input("Ingrese su estatura en Metros: "))
+
+Imc = Peso / (Estatura**2)
+
+print ("Su IMC es: ",Imc)
+
+
