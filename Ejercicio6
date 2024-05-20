@@ -1,0 +1,13 @@
+#CUAL NUMERO ES MAYOR
+
+numero1 = input("ingrese el primer numero: ")
+numero2 = input("ingrese el segundo numeor: ")
+
+if numero1 > numero2:
+    print(numero1,"es mayor a",numero2,)
+    
+elif numero2 > numero1:
+    print(numero2,"es mayor a",numero1,)
+
+elif numero1 == numero2:
+    print("los numero son iguales")

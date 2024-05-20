@@ -1,0 +1,12 @@
+#COSTOS DE ENVIOS
+
+kg = float(input("ingrese el peso del paquete en KG para saber el costo de envio: "))
+
+if kg < 1:
+    print("El costo es de $50 pesos")
+elif kg < 5:
+    print("El costo es de $100 pesos")
+elif kg < 10:
+    print("El costo es de $200 pesos")
+else kg > 10:
+    print("El costo es de $500 pesos")
