@@ -1,0 +1,16 @@
+
+#ERES MAYOR DE EDAD?
+
+edad = int(input("Favor de Ingresar su Eda: "))
+
+
+if edad >= 18:
+    
+    print("Usted es Mayor de Edad adelante")
+    
+elif edad <= 17:
+    
+    print("Usted es menor de Edad no puede pasar")    
+    
+    
+
