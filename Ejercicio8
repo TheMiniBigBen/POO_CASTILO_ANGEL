@@ -1,0 +1,9 @@
+#Numeros Pares
+
+numero = 2
+
+while numero < 20:
+
+    numero += 2
+
+    print(numero)
