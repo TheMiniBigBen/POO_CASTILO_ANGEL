@@ -1,0 +1,15 @@
+#contraseña
+
+
+i = ("POO123")
+while True:
+    password = input("Ingrese su contraseña: ") 
+    if password == i:
+        print("Acceso Autorizado")
+        break
+    else:
+        print("Acceso Denegado")
+
+
+
+

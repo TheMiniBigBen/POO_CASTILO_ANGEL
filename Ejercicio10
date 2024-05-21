@@ -1,0 +1,8 @@
+#suma de dos numeros
+while True:
+    num1 = float(input("ingrese su primer numero: "))
+    num2 = float(input("ingrese su segundo numero: "))
+    suma = num1 + num2
+    print("La suma de", num1, "y", num2, "es", suma,)
+    if input("PRECIONE ""n"" PARA SALIR o ENTER PARA SEGUIR SUMANDO NUMEROS") == "n":
+        break
