@@ -1,0 +1,5 @@
+#ITERAR HOLA MUNDO EN MAYUSCULAS
+i = "hola mundo"
+
+for x in i:
+    print(x.upper())
