@@ -1,0 +1,3 @@
+#TABLA DE MULTIPLICAR DE 5 HASTA LA TABLA DE 10
+for i in range(1, 11):
+    print("5 x", i, "=", 5*i)
