@@ -8,5 +8,5 @@ elif kg < 5:
     print("El costo es de $100 pesos")
 elif kg < 10:
     print("El costo es de $200 pesos")
-else kg > 10:
+else:
     print("El costo es de $500 pesos")
