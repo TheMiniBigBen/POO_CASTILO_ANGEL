@@ -1,0 +1,4 @@
+#lista de paises 
+paises = ["México", "Argentina", "España", "Colombia", "Chile", "Perú", "Brasil", "Uruguay", "Ecuador", "Venezuela"]
+for pais in paises:
+    print(pais)
