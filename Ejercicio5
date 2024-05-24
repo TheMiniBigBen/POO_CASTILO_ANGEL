@@ -11,7 +11,3 @@ if edad >= 18:
 elif edad <= 17:
     
     print("Usted es menor de Edad no puede pasar")    
-    
-    
-
-#
