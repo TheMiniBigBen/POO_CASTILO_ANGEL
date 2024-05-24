@@ -1,0 +1,79 @@
+
+while True:
+    print("¿Qué tipo de temperatura desea convertir?")
+    print("1. Celsius")
+    print("2. Fahrenheit")
+    print("3. Kelvin o absoluta")
+    print("4. Salir")
+
+    tipo = input("Ingresa el número de opción: ")
+
+    if tipo == '1':
+        celsius = float(input("Ingresa la temperatura en grados Celsius: "))
+        print("¿A qué tipo de temperatura deseas convertir?")
+        print("1. Fahrenheit")
+        print("2. Kelvin o absoluta")
+        
+        opcion = input("Ingresa el número de opción: ")
+        if opcion == '1':
+            fahrenheit = (celsius * 9/5) + 32
+            print(celsius, " grados Celsius equivalen a ",fahrenheit, "grados Fahrenheit.")
+        elif opcion == '2':
+            kelvin = celsius + 273.15
+            print(celsius, "grados Celsius equivalen a ",kelvin, "grados Kelvin.")
+        else:
+            print("Opción no válida.")
+    elif tipo == '2':
+        fahrenheit = float(input("Ingresa la temperatura en grados Fahrenheit: "))
+        print("¿A qué tipo de temperatura deseas convertir?")
+        print("1. Celsius")
+        print("2. Kelvin o absoluta")
+        opcion = input("Ingresa el número de opción: ")
+        if opcion == '1':
+            celsius = (fahrenheit - 32) * 5/9
+            print(fahrenheit, "grados Fahrenheit equivalen a", celsius, "grados Celsius.")
+        elif opcion == '2':
+            kelvin = (fahrenheit - 32) * 5/9 + 273.15
+            print(fahrenheit, "grados Fahrenheit equivalen a", kelvin,"grados Kelvin.")
+        else:
+            print("Opción no válida.")
+    elif tipo == '3':
+        kelvin = float(input("Ingresa la temperatura en grados Kelvin: "))
+        print("¿A qué tipo de temperatura deseas convertir?")
+        print("1. Celsius")
+        print("2. Fahrenheit")
+        opcion = input("Ingresa el número de opción: ")
+        if opcion == '1':
+            celsius = kelvin - 273.15
+            print(kelvin, "grados Kelvin equivalen a", celsius, "grados Celsius.")
+        elif opcion == '2':
+            fahrenheit = (kelvin - 273.15) * 9/5 + 32
+            print(kelvin, "grados Kelvin equivalen a",fahrenheit, "grados Fahrenheit.")
+        else:
+            print("Opción no válida.")
+    elif tipo == '4':
+        break
+    else:
+        print("Opción no válida. Por favor, ingresa 1, 2, 3 o 4.")
+
+
+
+#while True:
+    #print("¿Qué tipo de conversión de temperatura deseas realizar?")
+    #print("1. De Celsius a Fahrenheit")
+    #print("2. De Fahrenheit a Celsius")
+    #print("3. Salir")
+    #opcion = input("Ingresa el número de opción: ")
+    #if opcion == "1":
+        #celsius = float(input("Ingresa la temperatura en grados Celsius: "))
+        #fahrenheit = (celsius * 9/5) + 32
+        #print("La temperatura en grados Fahrenheit es:", fahrenheit)
+    #elif opcion == '2':
+        #fahrenheit = float(input("Ingresa la temperatura en grados Fahrenheit: "))
+        #celsius = (fahrenheit - 32) * 5/9
+        #print("La temperatura en grados Celsius es:", celsius)
+    #elif opcion == '3':
+        #print("Saliendo del programa...")
+        #break
+    #else:
+        #print("Opción no válida. Por favor, ingresa 1, 2 o 3.")
