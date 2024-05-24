@@ -10,4 +10,4 @@ elif kg < 10:
     print("El costo es de $200 pesos")
 else:
     print("El costo es de $500 pesos")
-#
+    
