@@ -1,0 +1,14 @@
+# Solicitar al usuario que ingrese tres promedios
+
+promedio1 = float(input("Ingresa el primer promedio: "))
+promedio2 = float(input("Ingresa el segundo promedio: "))
+promedio3 = float(input("Ingresa el tercer promedio: "))
+
+if promedio1 > promedio2 and promedio1 > promedio3:
+    mayor_promedio = promedio1
+elif promedio2 > promedio1 and promedio2 > promedio3:
+    mayor_promedio = promedio2
+else:
+    mayor_promedio = promedio3
+
+print("El mayor promedio es:", mayor_promedio)
