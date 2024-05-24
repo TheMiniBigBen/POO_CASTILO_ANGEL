@@ -1,0 +1,15 @@
+# Lista de edades
+edades = [15, 22, 17, 18, 34, 12, 19, 45]
+
+mayores_edad = []
+menores_edad = []
+
+for edad in edades:
+    if edad >= 18:
+        mayores_edad.append(edad)
+    else:
+        menores_edad.append(edad)
+
+# Imprimiendo los resultados
+print("Edades mayores de edad:", mayores_edad)
+print("Edades menores de edad:", menores_edad)
