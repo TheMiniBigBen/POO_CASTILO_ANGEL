@@ -1,0 +1,23 @@
+while True:
+    print("!Bienbenido a la calcuoladore de areas¡")
+    print("¿Que figura desea calcular?")
+    print("1.   ""Triangulo""")
+    print("1.   ""Rectangulo""")
+    print("3.   ""Mejor Nadota Salir""")
+    opcion = input("Escoja una opcion: ")
+    if opcion == "1":
+       base = float(input("Medida de la ""Base"": "))
+       altura = float(input("Mediad la ""Altura"": "))
+       area = (base * altura) / 2
+       print("El area del triangulo es: ", area,"""(Base*Altura)/2""")
+    elif opcion == "2":
+        base = float(input("Medida de la ""Base"": "))
+        altura = float(input("Mediad la ""Altura"": "))
+        area = base * altura
+        print("El area del rectangulo es: ", area,"""Base*Altura""")
+    elif opcion == "3":
+        print("Adios Gracias por usar ""calcuArea5000""")
+        break
+    else:
+        print("Opcion no valida")
+       

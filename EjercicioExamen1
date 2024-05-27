@@ -1,0 +1,10 @@
+#identificador de numeros
+numero = float(input("Ingresa un numero cualquiera"))
+if numero > 1:
+    print("El numero es Positivo +")
+elif numero < 1:
+    print("El numero es Negativo -")
+elif numero == 0:
+    print("El numero es 0")
+else:
+    print("Ese no es un numero")
