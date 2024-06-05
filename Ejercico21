@@ -1,0 +1,9 @@
+persona = ("Pedro",50,"Mexico","Doctor","618XXXXXXX")
+
+nombre, edad,ciudad,profesion,noTelefono = persona
+
+print("Nombre:", nombre)
+print("Edad:", edad)
+print("Ciudad:", ciudad)
+print("Profesión:", profesion)
+print("Email:", noTelefono)
