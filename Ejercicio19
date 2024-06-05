@@ -1,0 +1,8 @@
+conjunto1 = {"Mango","Pera","Fresa"}
+conjunto2 = {"naranja", "kiwi", "mango"}
+
+union_conjuntos = conjunto1.union(conjunto2)
+print("Conjunto sin ""coco""", union_conjuntos)
+union_conjuntos.add("coco")
+
+print("Conjunto con ""coco""", union_conjuntos)
