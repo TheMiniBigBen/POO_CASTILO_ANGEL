@@ -1,0 +1,27 @@
+carros = {
+    "Toyota Corolla": 25000,
+    "Honda Civic": 23000,
+    "Ford Mustang": 55000,
+    "Chevrolet Camaro": 53000,
+    "Tesla Model 3": 45000,
+    "BMW Serie 3": 41000,
+    "Mercedes-Benz C-Class": 43000,
+    "Audi A4": 42000,
+    "Hyundai Elantra": 20000,
+    "Nissan Sentra": 19000
+}
+
+print("Precio Original")
+print(carros)
+
+
+x = 10
+
+for i in carros:
+    PrecioOriginal = carros[i]
+    descuento = PrecioOriginal*x
+    PrecioNuevo = PrecioOriginal - descuento
+    carros[i] = round(descuento,2)
+    
+print("Carros con descuento")
+print(carros)
