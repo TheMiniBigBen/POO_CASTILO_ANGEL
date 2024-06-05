@@ -1,0 +1,21 @@
+diccionario = {
+    "nombre" : "Angel",
+    "apellido" : "Garcia",
+    "edad" : 25,
+    "grupo" : "A",
+}
+
+
+diccionario["nombre"] = "Eduardo"
+diccionario["carrera"] = "ti"
+values = diccionario.values()
+itenms = diccionario.items()
+datos = diccionario.keys()
+del diccionario["grupo"]
+print(diccionario.keys())
+print(datos)
+print(diccionario.values())
+print(values)
+print(diccionario.items())
+print(itenms)
+print(diccionario)
