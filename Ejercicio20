@@ -1,0 +1,8 @@
+conjunto1 ={1,2,3,4,5,6,7,8,9}
+conjunto2 ={10,20,30,40,50,60,70,80,90}
+conjunto3 ={11,22,33,44,55,66,77,88,99}
+union_conjuntos = conjunto1.union(conjunto2).union(conjunto3)
+conjunto_pares = {num for num in union_conjuntos if num % 2 == 0}
+print("Conjunto con valores pares:", conjunto_pares)
+print("Todos los conjuntos", union_conjuntos)
+
