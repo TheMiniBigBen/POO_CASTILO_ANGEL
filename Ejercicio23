@@ -1,0 +1,77 @@
+class Computadora:
+    def __init__(self, marca, modelo, color):
+        self.marca = marca
+        self.modelo = modelo
+        self.color = color
+        self.encendida = False
+
+    def encender(self):
+        self.encendida = True
+        print("La " + self.marca + " " + self.modelo + " ha sido encendida.")
+
+    def apagar(self):
+        self.encendida = False
+        print("La " + self.marca + " " + self.modelo + " ha sido apagada.")
+
+    def ejecutar_programa(self, programa):
+        if self.encendida:
+            print("La", self.marca, self.modelo, "está ejecutando", programa + ".")
+        else:
+            print("La", self.marca, self.modelo, "está apagada. Enciéndela para ejecutar programas.")
+    def reparar(self, tecnico):
+        tecnico.reparar(self)
+
+class Tecnico:
+    def __init__(self, nombre):
+        self.nombre = nombre
+    
+    def reparar(self, computadora):
+        print("El técnico", self.nombre, "está reparando la computadora", computadora.marca, computadora.modelo)
+
+computadora1 = Computadora("Apple", "MacBook Pro", "Plata")
+computadora2 = Computadora("Dell", "XPS 13", "Negro")
+
+tecnico1 = Tecnico("Juan")
+tecnico2 = Tecnico("María")
+
+print("Computadoras disponibles:")
+print("1: " + computadora1.marca + " " + computadora1.modelo + " de color " + computadora1.color)
+print("2: " + computadora2.marca + " " + computadora2.modelo + " de color " + computadora2.color)
+
+eleccion = input("¿Cuál computadora deseas seleccionar? (1 o 2): ")
+
+if eleccion == "1":
+    computadora_seleccionada = computadora1
+elif eleccion == "2":
+    computadora_seleccionada = computadora2
+else:
+    print("Elección no válida.")
+    exit()
+
+print("¿Qué acción deseas realizar con la " + computadora_seleccionada.marca + " " + computadora_seleccionada.modelo + "?")
+print("1: Encender")
+print("2: Apagar")
+print("3: Ejecutar programa")
+print("4: Reparar")
+accion = input("Elige una acción (1, 2, 3 o 4): ")
+
+if accion == "1":
+    computadora_seleccionada.encender
+elif accion == "2":
+    computadora_seleccionada.apagar
+elif accion == "3":
+    programa = input("¿Qué programa deseas ejecutar? ")
+    computadora_seleccionada.encender
+    computadora_seleccionada.ejecutar_programa(programa)
+    computadora_seleccionada.apagar
+elif accion == "4":
+    print("Técnicos disponibles: ")
+    print("1: " + tecnico1.nombre)
+    print("2: " + tecnico2.nombre)
+    TecnicoSeleccionado = input("¿Que tecnico desea que repare su equipo",)
+    if TecnicoSeleccionado == "1":
+        computadora_seleccionada.reparar(tecnico1)
+    elif TecnicoSeleccionado == "2":
+        computadora_seleccionada.reparar(tecnico2)
+    else:
+        print("Técnico no reconocido.")
