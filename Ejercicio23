@@ -1,77 +1,113 @@
-class Computadora:
-    def __init__(self, marca, modelo, color):
-        self.marca = marca
-        self.modelo = modelo
-        self.color = color
-        self.encendida = False
+#23
+class mendigo:
+    def __init__(self, nombre, edad, colonia,):
+        self.nombre = nombre
+        self.edad = edad
+        self.colonia = colonia
 
-    def encender(self):
-        self.encendida = True
-        print("La " + self.marca + " " + self.modelo + " ha sido encendida.")
+    def pedir(self):
+        print("Me da pa un cafe")
 
-    def apagar(self):
-        self.encendida = False
-        print("La " + self.marca + " " + self.modelo + " ha sido apagada.")
+    def consumir(self):
+        print("consumiendo...")
 
-    def ejecutar_programa(self, programa):
-        if self.encendida:
-            print("La", self.marca, self.modelo, "está ejecutando", programa + ".")
+    def tomar(self):
+        print("tomando...")
+
+    def ponerArapos(self, arapos):
+        self.arapos = arapos
+
+    def identifiquese(self):
+        print("Hola soy ", self.nombre,
+        " tengo ", self.edad, " años y mendigo en la colonia ", self.colonia)
+        if self.arapos:
+            print("tengo puestos unos arapos de color",
+                  self.arapos.color, "y son de un material tipo", self.arapos.material)
+    def consumo(self, Vicio):
+        print("Esta consumiendo",
+              Vicio.nombre,)
+        
+mendigo1 = mendigo("Juan", 45, "Centro")
+mendigo2 = mendigo("Pedro", 52, "Norte")
+
+#24
+class Policia:
+    
+    def __init__(self, nombre,):
+        self.nombre = nombre
+        self.mendigosCampturados = []
+    
+    def camputirarMendigo(self,mendigo):
+        if mendigo not in self.mendigosCampturados:
+            self.mendigosCampturados.append(mendigo)
+            print(self.nombre, "esta en busca del mendigo ", mendigo.nombre)
         else:
-            print("La", self.marca, self.modelo, "está apagada. Enciéndela para ejecutar programas.")
-    def reparar(self, tecnico):
-        tecnico.reparar(self)
+            print(self.nombre, "ya capturo al mendigo ", mendigo.nombre)
+    
+    def mendigosCampturados(self):
+        print(self.nombre, "a capturado a los siguintes mendigos: ")
+        for mendigo in self.mendigosCampturados:
+            print(mendigo.nombre)
+policia1 = Policia("Rambo")
 
-class Tecnico:
+#25
+class Lavida:
     def __init__(self, nombre):
         self.nombre = nombre
+        self.mendigos = []
+
+    def añadirMendigo(self, mendigos):
+        self.mendigos.append(mendigos)
+        print(mendigos.nombre,"añadio a la lista de mendigos ,", self.nombre)
     
-    def reparar(self, computadora):
-        print("El técnico", self.nombre, "está reparando la computadora", computadora.marca, computadora.modelo)
+    def listaDeMendigos(self):
+        print(self.nombre, "tiene los siguientes mendigos: ")
+        for mendigo in self.mendigos:
+            print(mendigo.nombre)
 
-computadora1 = Computadora("Apple", "MacBook Pro", "Plata")
-computadora2 = Computadora("Dell", "XPS 13", "Negro")
+    def mendigoEnLaTierra(self):
+        print(self.nombre,"Tiene a su mando: ")
+        for mendigo in self.mendigos:
+            mendigo.pedir()
+lavida = Lavida("La Vida")
 
-tecnico1 = Tecnico("Juan")
-tecnico2 = Tecnico("María")
+#26
+class Arapos:
+    def __init__(self, color, material):
+        self.color = color
+        self.material = material
 
-print("Computadoras disponibles:")
-print("1: " + computadora1.marca + " " + computadora1.modelo + " de color " + computadora1.color)
-print("2: " + computadora2.marca + " " + computadora2.modelo + " de color " + computadora2.color)
+    def describir(self):
+        print("El arapo es de color ", self.color, 
+        "y esta echo de material ", self.material)
 
-eleccion = input("¿Cuál computadora deseas seleccionar? (1 o 2): ")
+arapo1 = Arapos("mugre", "lana")
+arapo2 = Arapos("mugre", "franela")
 
-if eleccion == "1":
-    computadora_seleccionada = computadora1
-elif eleccion == "2":
-    computadora_seleccionada = computadora2
-else:
-    print("Elección no válida.")
-    exit()
+#27
+class MendigoEnRecuperacion(mendigo):
+    def __inir__(self,nombre, edad, colonia, tipoDeReabilitacion):
+        super().__init__(nombre, edad, colonia,)
+        self.tipoDeReabilitacion = tipoDeReabilitacion
+    
+    def trabajar(self):
+        print(self.nombre, "esta trabajando en la la vida lleva una recuperacion de tipo ", 
+              self.tipoDeReabilitacion)
 
-print("¿Qué acción deseas realizar con la " + computadora_seleccionada.marca + " " + computadora_seleccionada.modelo + "?")
-print("1: Encender")
-print("2: Apagar")
-print("3: Ejecutar programa")
-print("4: Reparar")
-accion = input("Elige una acción (1, 2, 3 o 4): ")
+mendigoEnRecuperacion = MendigoEnRecuperacion("Carlitos", 47, "Tepito" "Anexado")
 
-if accion == "1":
-    computadora_seleccionada.encender
-elif accion == "2":
-    computadora_seleccionada.apagar
-elif accion == "3":
-    programa = input("¿Qué programa deseas ejecutar? ")
-    computadora_seleccionada.encender
-    computadora_seleccionada.ejecutar_programa(programa)
-    computadora_seleccionada.apagar
-elif accion == "4":
-    print("Técnicos disponibles: ")
-    print("1: " + tecnico1.nombre)
-    print("2: " + tecnico2.nombre)
-    TecnicoSeleccionado = input("¿Que tecnico desea que repare su equipo",)
-    if TecnicoSeleccionado == "1":
-        computadora_seleccionada.reparar(tecnico1)
-    elif TecnicoSeleccionado == "2":
-        computadora_seleccionada.reparar(tecnico2)
-    else:
-        print("Técnico no reconocido.")
+#28
+
+class Vicio:
+    def __init__(self,apodo, material,):
+        self.apodo = apodo
+        self.material = material
+    
+    def describir(self):
+        print("El vicio es ", self.apodo,
+        "y esta echo de material ", self.material)
+            
+vicio1 = Vicio("Foco","destruccion")
+vicio2 = Vicio("Crico","muerte")
+
+
