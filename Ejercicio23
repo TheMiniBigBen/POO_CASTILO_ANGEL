@@ -109,5 +109,3 @@ class Vicio:
             
 vicio1 = Vicio("Foco","destruccion")
 vicio2 = Vicio("Crico","muerte")
-
-
