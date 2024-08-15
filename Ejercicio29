@@ -1,0 +1,34 @@
+def explicar_abstraccion():
+    print("La abstracción es como un resumen. En POO, creamos clases que representan conceptos generales, ocultando los detalles complejos y mostrando solo lo esencial.")
+
+def explicar_encapsulamiento():
+    print("El encapsulamiento es como una cápsula. Protege los datos de una clase, permitiendo el acceso solo a través de métodos específicos (getters y setters).")
+
+def explicar_herencia():
+    print("La herencia es como una familia. Una clase hija hereda características (atributos y métodos) de una clase padre, y puede agregar sus propias características especiales.")
+
+def explicar_polimorfismo():
+    print("El polimorfismo es como un actor con muchos papeles. Permite que objetos de diferentes clases respondan al mismo mensaje (método) de manera distinta.")
+
+while True:
+    print("Menú:")
+    print("1. Abstracción")
+    print("2. Encapsulamiento")
+    print("3. Herencia")
+    print("4. Polimorfismo")
+    print("5. Salir")
+
+    opcion = input("Elige una opción: ")
+
+    if opcion == '1':
+        explicar_abstraccion()
+    elif opcion == '2':
+        explicar_encapsulamiento()
+    elif opcion == '3':
+        explicar_herencia()
+    elif opcion == '4':
+        explicar_polimorfismo()
+    elif opcion == '5':
+        break
+    else:
+        print("Opción inválida. Inténtalo de nuevo.")
